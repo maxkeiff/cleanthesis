@@ -14,8 +14,9 @@
     titlepage=on,           % own page for each title page
     captions=tableabove,    % display table captions above the float env
     chapterprefix=false,    % do not display a prefix for chapters
-    appendixprefix=false,    % but display a prefix for appendix chapter
+    appendixprefix=false,   % but display a prefix for appendix chapter
     draft=false,            % value for draft version
+    numbers=noenddot,       % remove dot-after-number in figure captions
 ]{scrreprt}%
 
 
@@ -91,13 +92,13 @@
 % --------------------------
 %
 {%
-\setstretch{1.1}
-\renewcommand{\bibfont}{\normalfont\small}
-\setlength{\biblabelsep}{0pt}
-\setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
-\printbibliography[nottype=online]
-\newrefcontext[labelprefix={@}]
-\printbibliography[heading=subbibliography,title={Webpages},type=online]
+    \setstretch{1.1}
+    \renewcommand{\bibfont}{\normalfont\small}
+    \setlength{\biblabelsep}{0pt}
+    \setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
+    \printbibliography[nottype=online]
+    \newrefcontext[labelprefix={@}]
+    \printbibliography[heading=subbibliography,title={Webpages},type=online]
 }
 \cleardoublepage
 
